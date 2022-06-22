@@ -1,0 +1,11 @@
+{
+    "signin": {
+        "login": "my_login",
+        "password": "very_strong_password"
+    },
+    "order": {
+        "order_id": 123,
+        "start_status": "new",
+        "new_status": "progress"
+    }
+}

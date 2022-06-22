@@ -1,0 +1,42 @@
+{
+  "name": "tdo-example-typescript",
+  "version": "1.0.0",
+  "description": "Example of automation test project with TDO usage ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --config .mocharc.json ./tests/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qx57/tdo-example-typescript.git"
+  },
+  "keywords": [
+    "testing",
+    "tdo",
+    "typescript",
+    "mocha",
+    "api",
+    "ui",
+    "db"
+  ],
+  "author": "qx57",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qx57/tdo-example-typescript/issues"
+  },
+  "homepage": "https://github.com/qx57/tdo-example-typescript#readme",
+  "dependencies": {
+    "@playwright/test": "^1.22.2",
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "got": "^12.1.0",
+    "http-req-builder": "^1.3.1",
+    "mocha": "^10.0.0",
+    "nock": "^13.2.7",
+    "relax-env-json": "^0.0.4",
+    "relax-steps-allure": "^0.1.1",
+    "ts-node": "^10.8.1",
+    "typeorm": "^0.3.6"
+  }
+}
