@@ -12,9 +12,9 @@ describe('Example for API + DB test', async () => {
         });
         await step('Change order status through API', async () => {
             const orderApi = new OrderApi();
-            orderApi.changeStatus(data.order_id, data.new_status);
-            expect(orderApi.response.statusCode).to.be.equal(200);
-            expect(orderApi.response.body.status).to.be.equal(data.new_status);
+            const response = await orderApi.changeStatus(data.order_id, data.new_status);
+            expect(response.statusCode).to.be.equal(200);
+            expect(response.body.status).to.be.equal(data.new_status);
         });
         await step('Check order status in DB again', async () => {
             orderDb?.reload();

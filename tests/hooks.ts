@@ -1,5 +1,6 @@
 import { Browser, chromium } from "@playwright/test";
 import { AppDataSource } from "../dataSource";
+const env = require('relax-env-json').getEnvironment();
 
 // connect to DB
 AppDataSource.initialize()
@@ -15,9 +16,10 @@ export const mochaHooks = async (): Promise<Mocha.RootHookObject> => {
         async beforeAll(this: Mocha.Context) {
             // start the playwright context
             browser = await chromium.launch();
-            const browser_context = await browser.newContext();
-            const login_page = await browser_context.newPage();
-            const order_page = await browser_context.newPage();
+            const login_context = await browser.newContext();
+            const login_page = await login_context.newPage();
+            const order_context = await browser.newContext();
+            const order_page = await order_context.newPage();
 
             const context = {
                 browser: browser,
@@ -29,6 +31,7 @@ export const mochaHooks = async (): Promise<Mocha.RootHookObject> => {
         },
         async afterAll(this: Mocha.Context) {
             browser.close();
+            AppDataSource.destroy();
         }
     }
 }

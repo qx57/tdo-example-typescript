@@ -58,3 +58,7 @@ export class SigninPage {
         return this.page;
     }
 }
+
+function networkidle(arg0: string, networkidle: any) {
+    throw new Error("Function not implemented.");
+}

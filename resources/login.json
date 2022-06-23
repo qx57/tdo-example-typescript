@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/login"
+    },
+    "response": {
+        "status": 200,
+        "body": "<html><head></head><body><form method=\"post\" action=\"/cabinet\" class=\"signin\"><input type=\"text\" id=\"login\" name=\"login\" value=\"\" /><input type=\"password\" id=\"password\" name=\"password\" value=\"\" /><input type=\"submit\" name=\"Sign in\" /></form></body></html>",
+        "headers": {
+            "Content-Type": "text/html"
+        }
+    }
+}

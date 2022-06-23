@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/cabinet"
+    },
+    "response": {
+        "status": 200,
+        "body": "<html><head></head><body><div id=\"info\"><span class=\"username\">my_login</span></div></body></html>",
+        "headers": {
+            "Content-Type": "text/html"
+        }
+    }
+}

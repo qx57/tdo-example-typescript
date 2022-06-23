@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPath": "/order_page"
+    },
+    "response": {
+        "status": 200,
+        "body": "<html><head></head><body><div id=\"order\"><span id=\"status\">new</span></div></body></html>",
+        "headers": {
+            "Content-Type": "text/html"
+        }
+    }
+}

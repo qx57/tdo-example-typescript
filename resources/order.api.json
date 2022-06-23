@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/order_api"
+    },
+    "response": {
+        "status": 200,
+        "body": "{\"status\": \"progress\"}",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

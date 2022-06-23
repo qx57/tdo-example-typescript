@@ -17,13 +17,13 @@ describe('Example for UI test', function (this: Mocha.Suite) {
             await signinPage.setLogin(data.login);
             expect(await signinPage.getLogin()).to.be.equal(data.login);
         });        
-        await step('set apssword field', async () => {
+        await step('set password field', async () => {
             await signinPage.setPassword(data.password);
             expect(await signinPage.getPassword()).to.be.equal(data.password);
         });
         await step('send form', async () => {
             const userPage = new UserPage(await signinPage.signin());
-            expect(userPage.getUsernameText()).to.be.equal(data.login);
+            expect(await userPage.getUsernameText()).to.be.equal(data.login);
         });
     });
 });
